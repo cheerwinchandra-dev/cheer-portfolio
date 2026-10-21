@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Password setup · Cheerwin Chandra</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/admin.css">
+<script type="module" src="/js/setup.js"></script>
+</head>
+<body>
+<div class="auth">
+  <p class="auth__word" aria-hidden="true">SETUP</p>
+  <form class="auth__card auth__card--wide" id="setup-form" novalidate>
+    <a class="auth__back" href="/">← Back to portfolio</a>
+    <h1 class="auth__title">Admin password setup</h1>
+    <p class="auth__sub">Creates the value Netlify needs. Everything happens in this browser; nothing is sent anywhere.</p>
+    <div class="field">
+      <label for="su-pass">New admin password</label>
+      <input id="su-pass" type="password" autocomplete="new-password" maxlength="128" required>
+    </div>
+    <div class="field">
+      <label for="su-pass2">Type it again</label>
+      <input id="su-pass2" type="password" autocomplete="new-password" maxlength="128" required>
+    </div>
+    <p class="hint">At least 8 characters. 10 or more with letters and numbers is much safer. Use a password that isn’t written anywhere else, such as a GitHub README.</p>
+    <button class="btn btn--block" type="submit"><span>Create value</span><span class="spinner" aria-hidden="true"></span></button>
+    <p class="auth__msg" id="su-msg" role="alert"></p>
+    <div id="su-out" hidden>
+      <div class="field">
+        <label for="su-hash">ADMIN_PASSWORD_HASH</label>
+        <textarea id="su-hash" rows="3" readonly></textarea>
+        <button class="tbtn" type="button" data-copy="su-hash">Copy</button>
+      </div>
+      <ol class="steps-list">
+        <li>In Netlify, open your project → <b>Project configuration</b> → <b>Environment variables</b> → <b>Add a variable</b>.</li>
+        <li>Key: <b>ADMIN_PASSWORD_HASH</b>. Value: the text above. Keep all scopes and deploy contexts, and save it.</li>
+        <li>Open <b>Deploys</b> → <b>Trigger deploy</b> and pick the first option. New settings only apply after a new deploy.</li>
+        <li>Sign in at <b>/login</b> with username <b>cheerwin</b> and the password you just typed. Your contact messages are in the <b>Inbox</b>.</li>
+      </ol>
+    </div>
+  </form>
+</div>
+</body>
+</html>

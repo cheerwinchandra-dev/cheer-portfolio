@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dashboard · Cheerwin Chandra</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0c0808">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/anton.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/admin.css">
+<script type="module" src="/js/admin.js"></script>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-inbox" viewBox="0 0 24 24"><path d="M3.5 13.5l2.6-8A2 2 0 0 1 8 4h8a2 2 0 0 1 1.9 1.5l2.6 8"/><path d="M3.5 13.5V18a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-4.5h-5l-1.5 2.5h-4L8.5 13.5z"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 2.8v5.7c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V5.8z"/><path d="M8.6 12.2l2.4 2.4 4.4-4.8"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M14 4.5h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-4"/><path d="M10 16.5L5.5 12 10 7.5M5.5 12H16"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M19.5 12a7.5 7.5 0 0 1-13.1 5M4.5 12A7.5 7.5 0 0 1 17.6 7"/><path d="M17.8 3.5v3.8H14M6.2 20.5v-3.8H10"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 19.5h14"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.8l2.5 5.2 5.7.8-4.1 4 1 5.6L12 16.7l-5.1 2.7 1-5.6-4.1-4 5.7-.8z"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4.5 7h15M9.5 7V4.5h5V7M6.5 7l.8 12.2a1.5 1.5 0 0 0 1.5 1.3h6.4a1.5 1.5 0 0 0 1.5-1.3L17.5 7"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11" height="11" rx="2"/><path d="M15.5 8.5V6.5a2 2 0 0 0-2-2h-7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M19.5 12h-15M10.5 6l-6 6 6 6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6.5 10.5L12 5l5.5 5.5"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6.5 13.5L12 19l5.5-5.5"/></symbol>
+  <symbol id="i-unread" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/><circle cx="19" cy="5" r="3" class="fill"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+</svg>
+
+<!-- ================= Sign in ================= -->
+<div class="auth" id="view-login" hidden>
+  <p class="auth__word" aria-hidden="true">PRIVATE</p>
+  <form class="auth__card" id="login-form" novalidate autocomplete="on">
+    <a class="auth__back" href="/"><svg class="icon"><use href="#i-back"></use></svg>Back to portfolio</a>
+    <span class="auth__lock" aria-hidden="true"><svg class="icon"><use href="#i-lock"></use></svg></span>
+    <h1 class="auth__title">Owner sign-in</h1>
+    <p class="auth__sub">Only you can open this dashboard. Sign in to read the messages people send from your contact form.</p>
+    <div class="field">
+      <label for="lg-user">Username</label>
+      <input id="lg-user" name="username" type="text" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false" maxlength="64" required>
+    </div>
+    <div class="field">
+      <label for="lg-pass">Password</label>
+      <div class="pw">
+        <input id="lg-pass" name="password" type="password" autocomplete="current-password" maxlength="256" required aria-describedby="caps-hint">
+        <button class="pw__toggle" type="button" aria-label="Show password" aria-pressed="false" data-pw-toggle="lg-pass"><svg class="icon"><use href="#i-eye"></use></svg></button>
+      </div>
+      <p class="hint hint--warn" id="caps-hint" hidden>Caps Lock is on.</p>
+    </div>
+    <button class="btn btn--block" type="submit" id="login-btn"><span>Sign in</span><span class="spinner" aria-hidden="true"></span></button>
+    <p class="auth__msg" id="login-msg" role="alert" aria-live="assertive"></p>
+    <p class="auth__note"><svg class="icon"><use href="#i-shield"></use></svg>After 5 wrong attempts, sign-in locks for 15 minutes.</p>
+  </form>
+</div>
+
+<!-- ================= Dashboard ================= -->
+<div class="app" id="view-app" hidden>
+  <aside class="side">
+    <a class="side__brand" href="/" target="_blank" rel="noopener"><span class="side__mono">CC</span><span>Dashboard</span></a>
+    <nav class="side__nav" aria-label="Dashboard sections">
+      <a href="#inbox" data-tab="inbox"><svg class="icon"><use href="#i-inbox"></use></svg><span>Inbox</span><b class="badge" id="unread-badge" hidden>0</b></a>
+      <a href="#projects" data-tab="projects"><svg class="icon"><use href="#i-grid"></use></svg><span>Projects</span></a>
+      <a href="#profile" data-tab="profile"><svg class="icon"><use href="#i-user"></use></svg><span>Profile</span></a>
+      <a href="#security" data-tab="security"><svg class="icon"><use href="#i-shield"></use></svg><span>Security</span></a>
+    </nav>
+    <div class="side__foot">
+      <a class="side__link" href="/" target="_blank" rel="noopener"><svg class="icon"><use href="#i-ext"></use></svg>View site</a>
+      <button class="side__link" type="button" id="logout-btn"><svg class="icon"><use href="#i-out"></use></svg>Sign out</button>
+      <p class="side__session" id="session-left"></p>
+    </div>
+  </aside>
+
+  <main class="main" id="main">
+    <!-- Inbox -->
+    <section class="panel" data-panel="inbox" aria-labelledby="h-inbox">
+      <header class="panel__head">
+        <div>
+          <h1 class="panel__title" id="h-inbox">Inbox</h1>
+          <p class="panel__sub">Messages people send from the contact form on your site.</p>
+        </div>
+        <div class="kpis" id="kpis">
+          <div class="kpi"><span class="kpi__n" id="kpi-all">0</span><span class="kpi__l">Total</span></div>
+          <div class="kpi kpi--hot"><span class="kpi__n" id="kpi-unread">0</span><span class="kpi__l">Unread</span></div>
+          <div class="kpi"><span class="kpi__n" id="kpi-starred">0</span><span class="kpi__l">Starred</span></div>
+        </div>
+      </header>
+
+      <div class="toolbar">
+        <div class="seg" role="group" aria-label="Filter messages">
+          <button type="button" class="seg__btn is-on" data-filter="all" aria-pressed="true">All <b id="c-all">0</b></button>
+          <button type="button" class="seg__btn" data-filter="unread" aria-pressed="false">Unread <b id="c-unread">0</b></button>
+          <button type="button" class="seg__btn" data-filter="starred" aria-pressed="false">Starred <b id="c-starred">0</b></button>
+        </div>
+        <label class="search">
+          <svg class="icon"><use href="#i-search"></use></svg>
+          <span class="sr">Search messages</span>
+          <input type="search" id="search" placeholder="Search name, email or text" maxlength="100" autocomplete="off">
+        </label>
+        <div class="toolbar__actions">
+          <button type="button" class="tbtn" id="mark-all"><svg class="icon"><use href="#i-check"></use></svg><span>Mark all read</span></button>
+          <a class="tbtn" id="export" href="/api/admin/messages.csv" download><svg class="icon"><use href="#i-download"></use></svg><span>Export CSV</span></a>
+          <button type="button" class="tbtn tbtn--icon" id="refresh" aria-label="Refresh inbox"><svg class="icon"><use href="#i-refresh"></use></svg></button>
+        </div>
+      </div>
+      <p class="synced" id="synced" aria-live="polite"></p>
+
+      <div class="mail" id="mail">
+        <ul class="mail__list" id="mail-list" aria-label="Messages"></ul>
+        <article class="mail__detail" id="mail-detail" aria-live="polite">
+          <div class="placeholder">
+            <svg class="icon"><use href="#i-inbox"></use></svg>
+            <p>Select a message to read it.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="panel" data-panel="projects" aria-labelledby="h-projects" hidden>
+      <header class="panel__head">
+        <div>
+          <h1 class="panel__title" id="h-projects">Projects</h1>
+          <p class="panel__sub">Choose what appears in <em>Featured work</em>. New GitHub repositories show up on their own: the site refreshes from GitHub whenever its copy is more than 15 minutes old.</p>
+        </div>
+        <div class="sync-box">
+          <p id="gh-status">Loading…</p>
+          <button type="button" class="tbtn" id="gh-sync"><svg class="icon"><use href="#i-refresh"></use></svg><span>Sync with GitHub now</span></button>
+        </div>
+      </header>
+      <p class="order" id="order-preview"></p>
+      <ul class="repos" id="repo-list"></ul>
+    </section>
+
+    <!-- Profile -->
+    <section class="panel" data-panel="profile" aria-labelledby="h-profile" hidden>
+      <header class="panel__head">
+        <div>
+          <h1 class="panel__title" id="h-profile">Profile</h1>
+          <p class="panel__sub">Edit the words on your portfolio. Changes go live as soon as you save.</p>
+        </div>
+      </header>
+      <form id="profile-form" class="pform" novalidate></form>
+    </section>
+
+    <!-- Security -->
+    <section class="panel" data-panel="security" aria-labelledby="h-security" hidden>
+      <header class="panel__head">
+        <div>
+          <h1 class="panel__title" id="h-security">Security</h1>
+          <p class="panel__sub">Your password, signed-in devices and recent sign-in activity.</p>
+        </div>
+      </header>
+      <div class="sec">
+        <form class="card" id="pw-form" novalidate>
+          <h2 class="card__title">Change password</h2>
+          <p class="card__sub" id="pw-source"></p>
+          <div class="field">
+            <label for="pw-current">Current password</label>
+            <div class="pw"><input id="pw-current" type="password" autocomplete="current-password" maxlength="256" required><button class="pw__toggle" type="button" aria-label="Show password" aria-pressed="false" data-pw-toggle="pw-current"><svg class="icon"><use href="#i-eye"></use></svg></button></div>
+            <p class="err" data-err="currentPassword"></p>
+          </div>
+          <div class="field">
+            <label for="pw-new">New password</label>
+            <div class="pw"><input id="pw-new" type="password" autocomplete="new-password" maxlength="128" required aria-describedby="pw-rules"><button class="pw__toggle" type="button" aria-label="Show password" aria-pressed="false" data-pw-toggle="pw-new"><svg class="icon"><use href="#i-eye"></use></svg></button></div>
+            <div class="meter" aria-hidden="true"><i id="pw-meter"></i></div>
+            <p class="hint" id="pw-rules">At least 10 characters with letters and numbers. Don’t reuse your username.</p>
+            <p class="err" data-err="newPassword"></p>
+          </div>
+          <div class="field">
+            <label for="pw-confirm">Type the new password again</label>
+            <div class="pw"><input id="pw-confirm" type="password" autocomplete="new-password" maxlength="128" required><button class="pw__toggle" type="button" aria-label="Show password" aria-pressed="false" data-pw-toggle="pw-confirm"><svg class="icon"><use href="#i-eye"></use></svg></button></div>
+            <p class="err" data-err="confirm"></p>
+          </div>
+          <button class="btn" type="submit"><span>Update password</span><span class="spinner" aria-hidden="true"></span></button>
+        </form>
+
+        <div class="card">
+          <div class="card__row">
+            <h2 class="card__title">Signed-in devices</h2>
+            <button type="button" class="tbtn" id="revoke-others">Sign out other devices</button>
+          </div>
+          <ul class="sessions" id="sessions"></ul>
+        </div>
+
+        <div class="card card--wide">
+          <h2 class="card__title">Sign-in activity</h2>
+          <p class="card__sub">The last 50 events. Unknown places or devices? Change your password.</p>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Sign-in activity table">
+            <table class="log">
+              <thead><tr><th scope="col">When</th><th scope="col">Event</th><th scope="col">Device</th><th scope="col">Where</th></tr></thead>
+              <tbody id="events"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card card--wide card--info">
+          <h2 class="card__title">How sign-in is protected</h2>
+          <ul class="checks">
+            <li>Your password is stored only as a salted PBKDF2-SHA256 hash, never as text.</li>
+            <li>5 wrong attempts lock sign-in from that network for 15 minutes, doubling each time it happens again.</li>
+            <li>Sessions use a random 256-bit token in an HttpOnly, Secure, SameSite=Strict cookie.</li>
+            <li>You are signed out after 2 hours without activity, and after 12 hours at most.</li>
+            <li>Requests from other websites are refused (CSRF protection), and strict security headers block framing and injected scripts.</li>
+            <li>Messages are shown as plain text, so nothing a visitor types can run code here.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>
+</div>
+
+<noscript><p class="noscript">The dashboard needs JavaScript. Please turn it on and reload.</p></noscript>
+</body>
+</html>

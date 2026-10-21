@@ -1,0 +1,12 @@
+{
+  "name": "Cheerwin Chandra · Portfolio",
+  "short_name": "Cheerwin",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0c0808",
+  "theme_color": "#0c0808",
+  "icons": [
+    { "src": "/img/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "/img/apple-touch-icon.png", "type": "image/png", "sizes": "180x180" }
+  ]
+}

@@ -1,0 +1,15 @@
+# Netlify settings for this site. Leave the Netlify build settings on their
+# defaults: this file sets everything.
+#   Pages and files:  public/            (headers: public/_headers, short URLs: public/_redirects)
+#   API:              netlify/functions/api.mjs            (every /api/* request)
+#   Daily job:        netlify/functions/github-refresh.mjs (GitHub refresh, 03:17 UTC)
+
+[build]
+  command = "npm run build"
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[functions]
+  directory = "netlify/functions"

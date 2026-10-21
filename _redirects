@@ -1,0 +1,5 @@
+# Short addresses for your dashboard (Netlify reads this file on deploy).
+/login        /admin/            302!
+/dashboard    /admin/            302!
+# Clean address for the password setup page.
+/admin/setup  /admin/setup.html  200

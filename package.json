@@ -1,0 +1,22 @@
+{
+  "name": "cheerwin-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Cheerwin Chandra's portfolio with a secure contact inbox, ready for Netlify + Neon Postgres.",
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "hash-password": "node scripts/hash-password.mjs",
+    "prebuild": "node -e \"const fs=require('fs');const m=['lib/app.js','netlify/functions/api.mjs','public/index.html','scripts/build-html.mjs'].filter(f=>!fs.existsSync(f));if(m.length){console.error('\\nSome folders are missing from your GitHub repository (missing: '+m.join(', ')+').\\nUpload the folders lib, netlify, public and scripts themselves, not only the files inside them. See README, Step 1.\\n');process.exit(1)}\"",
+    "build": "node scripts/build-html.mjs"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "1.1.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.8"
+  }
+}
